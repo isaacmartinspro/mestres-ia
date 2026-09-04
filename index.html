@@ -21,6 +21,9 @@
     .av-b{background:linear-gradient(135deg,#65efff,#8b5cf6)}
     .av-c{background:linear-gradient(135deg,#f557d5,#65efff)}
     .av-d{background:linear-gradient(135deg,#b8ff6a,#8b5cf6)}
+    .book-card-photo{padding:0;overflow:hidden;background:none}
+    .book-card-photo:before{display:none}
+    .book-mockup-photo{display:block;overflow:hidden}
     @media(max-width:980px){.authors-grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}}
     @media(max-width:640px){.authors-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.author-item{padding:12px 13px}}
   </style>
@@ -77,25 +80,8 @@
           <div class="floating-chip chip-one">IA + Vendas</div>
           <div class="floating-chip chip-two">IA + Pessoas</div>
           <div class="floating-chip chip-three">IA + Estratégia</div>
-          <div class="book-card">
-            <div class="book-topline">MESTRES.IA</div>
-            <div class="book-mark">
-              <svg viewBox="0 0 240 240" role="img" aria-label="Símbolo abstrato de inteligência artificial">
-                <defs>
-                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#73f7ff"/>
-                    <stop offset="50%" stop-color="#8b5cf6"/>
-                    <stop offset="100%" stop-color="#ff4ecd"/>
-                  </linearGradient>
-                </defs>
-                <path d="M48 120c0-39.8 32.2-72 72-72s72 32.2 72 72-32.2 72-72 72-72-32.2-72-72Z" fill="none" stroke="url(#g1)" stroke-width="5" opacity=".55"/>
-                <path d="M74 151 102 84l19 47 18-34 27 54" fill="none" stroke="url(#g1)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="102" cy="84" r="8" fill="#73f7ff"/><circle cx="121" cy="131" r="8" fill="#9b72ff"/><circle cx="139" cy="97" r="8" fill="#d65cff"/><circle cx="166" cy="151" r="8" fill="#ff4ecd"/>
-              </svg>
-            </div>
-            <p class="book-kicker">LIVRO COLABORATIVO</p>
-            <h2>INTELIGÊNCIA<br />ARTIFICIAL<br /><span>NOS NEGÓCIOS</span></h2>
-            <div class="book-footer">Conhecimento prático para liderar a nova economia.</div>
+          <div class="book-card book-card-photo">
+            <img src="assets/capa-livro.jpg" alt="Capa do livro Inteligência Artificial como Ferramenta de Transformação" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;" />
           </div>
           <div class="data-panel">
             <div><span>Aplicação</span><strong>Prática</strong></div>
@@ -153,14 +139,8 @@
       <div class="container book-layout">
         <div class="book-scene reveal">
           <div class="book-shadow"></div>
-          <div class="book-mockup">
-            <div class="book-spine">MESTRES.IA</div>
-            <div class="book-cover-mini">
-              <p>MESTRES.IA</p>
-              <div class="mini-orb"></div>
-              <h3>INTELIGÊNCIA<br />ARTIFICIAL<br /><span>NOS NEGÓCIOS</span></h3>
-              <small>Uma obra colaborativa para transformar tecnologia em resultado.</small>
-            </div>
+          <div class="book-mockup book-mockup-photo">
+            <img src="assets/capa-livro.jpg" alt="Capa do livro Inteligência Artificial como Ferramenta de Transformação" style="width:100%;height:100%;object-fit:cover;border-radius:4px;box-shadow:40px 50px 80px rgba(0,0,0,.55);" />
           </div>
         </div>
 
