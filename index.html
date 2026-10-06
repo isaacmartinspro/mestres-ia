@@ -1,322 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portal oficial do livro Inteligência Artificial nos Negócios. Conteúdos, autores, ferramentas e aplicações práticas de IA para empresas." />
-  <meta name="theme-color" content="#070b17" />
-  <title>Mestres.IA | Inteligência Artificial nos Negócios</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css" />
-  <style>
-    .authors-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-top:10px}
-    .author-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:16px;background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:.25s}
-    .author-item:hover{border-color:rgba(101,239,255,.38);background:rgba(101,239,255,.05);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.25)}
-    .author-avatar{width:42px;height:42px;flex-shrink:0;border-radius:12px;display:grid;place-items:center;font-size:11px;font-weight:800;font-family:'Space Grotesk'}
-    .author-info strong{display:block;font-size:13px;line-height:1.25;font-weight:700}
-    .author-info small{color:var(--muted);font-size:11px;line-height:1.3;display:block;margin-top:2px}
-    .av-a{background:linear-gradient(135deg,#8b5cf6,#f557d5)}
-    .av-b{background:linear-gradient(135deg,#65efff,#8b5cf6)}
-    .av-c{background:linear-gradient(135deg,#f557d5,#65efff)}
-    .av-d{background:linear-gradient(135deg,#b8ff6a,#8b5cf6)}
-    .book-card-photo{padding:0;overflow:hidden;background:none}
-    .book-card-photo:before{display:none}
-    .book-mockup-photo{display:block;overflow:hidden}
-    .launch-bar{background:linear-gradient(90deg,#8b5cf6,#65efff 60%,#f557d5);padding:13px 20px;text-align:center;font-size:13px;font-weight:700;color:#06111a;letter-spacing:.01em}
-    .launch-bar a{color:#06111a;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-    .launch-bar a:hover{text-decoration:underline}
-    .launch-badge{background:rgba(0,0,0,.18);border-radius:999px;padding:3px 10px;font-size:11px;font-weight:800;letter-spacing:.08em}
-    .event-section{background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(101,239,255,.08));border:1px solid rgba(101,239,255,.2);border-radius:28px;padding:56px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;margin-top:60px}
-    .event-meta{display:flex;flex-wrap:wrap;gap:18px;margin:18px 0 28px}
-    .event-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:700}
-    @media(max-width:980px){.event-section{grid-template-columns:1fr;gap:24px;padding:36px}}
-    @media(max-width:640px){.event-section{padding:28px 22px}}
-    @media(max-width:980px){.authors-grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}}
-    @media(max-width:640px){.authors-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}.author-item{padding:12px 13px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portal oficial do livro Inteligência Artificial nos Negócios. Conteúdos, autores, recursos, eventos e aplicações práticas de IA para empresas.">
+<meta name="theme-color" content="#07111f">
+<title>Mestres.IA | Inteligência Artificial nos Negócios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--bg2:#0a1527;--card:#0d1a2e;--line:rgba(255,255,255,.10);--text:#f4f7ff;--muted:#a9b8d0;--cyan:#38dcf6;--purple:#8257ff;--orange:#ff7a00;--yellow:#ffd24a;--green:#25d366;--max:1180px;--radius:26px}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Manrope,Arial,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden} a{text-decoration:none;color:inherit} img{max-width:100%;display:block}.container{width:min(calc(100% - 40px),var(--max));margin:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(circle at 78% 15%,rgba(130,87,255,.22),transparent 30%),radial-gradient(circle at 15% 18%,rgba(56,220,246,.10),transparent 28%),linear-gradient(180deg,#07111f,#081323 55%,#07111f)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+.promo-bar{background:linear-gradient(90deg,#7448ff,#4fdcf6,#ff55c7);color:#07111f;font-weight:900;text-align:center;letter-spacing:.01em;position:relative;z-index:90}.promo-bar a{display:block;padding:10px 18px}.promo-bar a:hover{text-decoration:underline}
+.site-header{position:sticky;top:0;z-index:80;background:rgba(7,17,31,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}.nav-wrap{min-height:78px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}.brand-symbol{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;border:1px solid var(--cyan);font-family:Space Grotesk;font-weight:700;background:linear-gradient(135deg,rgba(56,220,246,.17),rgba(130,87,255,.20))}.brand-copy{font-size:1.25rem;font-weight:800;white-space:nowrap}.brand-copy em{font-style:normal;color:var(--cyan)}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:20px}.main-nav a{font-size:.93rem;font-weight:700;color:#becae0;white-space:nowrap;transition:.2s}.main-nav a:hover{color:#fff}.main-nav .nav-events{padding:10px 15px;border-radius:999px;background:rgba(255,122,0,.12);border:1px solid rgba(255,122,0,.38);color:#ffad5c}.buy-nav{display:inline-flex!important;align-items:center;justify-content:center;padding:12px 18px!important;border-radius:999px;background:linear-gradient(135deg,#ff9700,#ff6400);color:white!important;box-shadow:0 12px 30px rgba(255,107,0,.24)}.menu-toggle{display:none;margin-left:auto;width:44px;height:44px;background:transparent;border:1px solid var(--line);border-radius:12px}.menu-toggle span{display:block;width:20px;height:2px;background:#fff;margin:4px auto}
+.hero{padding:52px 0 48px;min-height:calc(100vh - 118px);display:flex;align-items:center}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:11px;color:var(--cyan);font-size:.78rem;letter-spacing:.17em;font-weight:800;text-transform:uppercase}.eyebrow:before{content:"";width:32px;height:1px;background:var(--cyan)}.hero h1{font-family:Space Grotesk,Manrope,sans-serif;font-size:clamp(3rem,6vw,5.7rem);line-height:.94;letter-spacing:-.055em;margin:20px 0 22px}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.65);margin-top:14px}.hero-lead{max-width:700px;color:#c0cde1;font-size:1.08rem;line-height:1.75;margin:0}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:56px;padding:0 22px;border-radius:999px;font-weight:900;border:1px solid transparent;transition:.22s}.button:hover{transform:translateY(-2px)}.button-primary{background:linear-gradient(135deg,var(--cyan),#8bdbff);color:#05121b;box-shadow:0 16px 35px rgba(56,220,246,.18)}.button-orange{background:linear-gradient(135deg,#ff9b13,#ff6200);color:#fff;box-shadow:0 16px 38px rgba(255,112,0,.25)}.button-outline{border-color:rgba(255,255,255,.17);background:rgba(255,255,255,.03)}.hero-mini{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;color:#9fb1cc;font-size:.92rem}.hero-mini span{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.025)}
+.hero-visual{position:relative;display:flex;justify-content:center}.book-stage{position:relative;padding:24px;border-radius:32px;background:linear-gradient(180deg,rgba(13,26,46,.88),rgba(8,15,29,.94));border:1px solid rgba(56,220,246,.20);box-shadow:0 35px 90px rgba(0,0,0,.40)}.book-stage:before,.book-stage:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(56,220,246,.20);inset:-25px;z-index:-1}.book-stage:after{inset:-65px;border-color:rgba(130,87,255,.18)}.book-cover{width:min(330px,75vw);border-radius:11px;box-shadow:0 30px 60px rgba(0,0,0,.5)}.float-tag{position:absolute;padding:10px 14px;border-radius:999px;background:#0a1426;border:1px solid rgba(255,255,255,.12);font-weight:800;font-size:.78rem;box-shadow:0 14px 35px rgba(0,0,0,.25)}.tag-a{left:-88px;top:70px}.tag-b{right:-78px;top:220px}
+.section{padding:82px 0}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:30px}.section-heading h2{font-family:Space Grotesk;font-size:clamp(2rem,4vw,3.3rem);margin:12px 0 0;line-height:1}.section-heading p{max-width:430px;color:var(--muted);line-height:1.75;margin:0}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.feature-card{padding:28px;border-radius:24px;background:rgba(13,26,46,.78);border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.22)}.feature-card small{color:var(--cyan);font-weight:800;letter-spacing:.12em}.feature-card h3{font-size:1.32rem;margin:15px 0 10px}.feature-card p{color:var(--muted);line-height:1.7}.feature-card a{color:var(--cyan);font-weight:800}.resources-anchor{scroll-margin-top:120px}
+.book-section{background:linear-gradient(180deg,transparent,rgba(130,87,255,.055),transparent)}.book-layout{display:grid;grid-template-columns:.86fr 1.14fr;gap:55px;align-items:center}.book-frame{padding:20px;border:1px solid var(--line);border-radius:28px;background:rgba(13,26,46,.82);box-shadow:0 30px 75px rgba(0,0,0,.3)}.book-frame img{border-radius:14px;width:100%}.book-content h2{font-family:Space Grotesk;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:14px 0}.book-content p{color:var(--muted);line-height:1.8}.check-list{list-style:none;padding:0;margin:22px 0;display:grid;gap:12px}.check-list li{display:flex;gap:12px;line-height:1.6}.check-list b{color:var(--cyan)}
+.authors-layout{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.authors-copy h2{font-family:Space Grotesk;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:14px 0}.authors-copy p{color:var(--muted);line-height:1.8}.authors-panel{display:grid;grid-template-columns:1fr 1fr;gap:16px}.author-chip{padding:22px;border-radius:22px;background:rgba(13,26,46,.8);border:1px solid var(--line)}.author-chip span{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,var(--cyan),var(--purple));color:#04111b;font-weight:900;margin-bottom:14px}.author-chip small{color:var(--muted)}
+.live-box{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:32px;border-radius:28px;background:linear-gradient(135deg,rgba(9,35,49,.92),rgba(12,23,42,.96));border:1px solid rgba(37,211,102,.20)}.live-box h2{font-family:Space Grotesk;font-size:clamp(2rem,4vw,3rem);margin:12px 0}.live-box p{color:var(--muted);line-height:1.7}.button-whatsapp{background:linear-gradient(135deg,#2ee276,#18ae54);color:#fff;min-height:66px;width:100%;box-shadow:0 17px 40px rgba(37,211,102,.2)}
+.events-section{position:relative;overflow:hidden}.events-card{padding:38px;border-radius:30px;background:linear-gradient(120deg,#471da3 0%,#2d136f 42%,#11162d 100%);border:1px solid rgba(255,255,255,.10);box-shadow:0 30px 80px rgba(0,0,0,.32);position:relative;overflow:hidden}.events-card:before{content:"";position:absolute;width:650px;height:650px;border:1px solid rgba(117,211,255,.13);border-radius:50%;left:-330px;top:-220px;box-shadow:0 0 0 55px rgba(117,211,255,.03),0 0 0 110px rgba(117,211,255,.025),0 0 0 165px rgba(117,211,255,.02)}.events-head{position:relative;z-index:1;max-width:760px}.events-head h2{font-family:Space Grotesk;font-size:clamp(2.2rem,4.3vw,3.8rem);line-height:1;margin:12px 0}.events-head p{color:#d7d9ef;line-height:1.7}.event-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.event-item{padding:24px;border-radius:22px;background:rgba(4,8,24,.28);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px)}.event-item.featured{border-color:rgba(255,175,80,.48);box-shadow:0 18px 44px rgba(0,0,0,.18)}.event-date{color:#ffd05d;font-size:.85rem;font-weight:900;letter-spacing:.13em}.event-item h3{font-size:1.55rem;margin:10px 0 8px}.event-item p{color:#c7cbea;margin:0 0 18px;line-height:1.6}.event-item .event-link{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:900}.event-item .event-link:hover{color:#ffd05d}
+.newsletter-box{display:grid;grid-template-columns:1fr .95fr;gap:28px;align-items:center;padding:34px;border-radius:28px;background:rgba(13,26,46,.82);border:1px solid var(--line)}.newsletter-box h2{font-family:Space Grotesk;font-size:clamp(2rem,4vw,3rem);margin:12px 0}.newsletter-box p{color:var(--muted);line-height:1.75}.lead-form{display:grid;gap:12px}.lead-form input{min-height:56px;border-radius:15px;border:1px solid var(--line);background:rgba(255,255,255,.04);padding:0 17px;color:#fff;font:inherit}.form-status{color:#8ea5c7;min-height:24px;margin:0}
+.footer{border-top:1px solid var(--line);padding:34px 0;background:rgba(4,10,20,.55)}.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:24px}.footer p{color:var(--muted);margin:8px 0}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{color:var(--muted)}
+.reveal{opacity:1;transform:none}
+@media(max-width:1050px){.main-nav{gap:12px}.main-nav a{font-size:.84rem}.hero-grid{gap:35px}.tag-a{left:-40px}.tag-b{right:-30px}}
+@media(max-width:880px){.promo-bar{font-size:.9rem}.menu-toggle{display:block}.main-nav{position:absolute;top:78px;left:18px;right:18px;display:none;flex-direction:column;align-items:stretch;padding:18px;background:rgba(7,17,31,.98);border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 70px rgba(0,0,0,.4)}.main-nav.open{display:flex}.main-nav a{text-align:center;font-size:.96rem}.hero{min-height:auto;padding:45px 0 65px}.hero-grid,.book-layout,.authors-layout,.live-box,.newsletter-box{grid-template-columns:1fr}.hero-copy{order:1}.hero-visual{order:2;margin-top:15px}.feature-grid,.event-grid{grid-template-columns:1fr}.section-heading{align-items:flex-start;flex-direction:column}.authors-panel{margin-top:10px}.tag-a,.tag-b{display:none}.book-cover{width:min(310px,72vw)}}
+@media(max-width:600px){.container{width:min(calc(100% - 28px),var(--max))}.site-header .nav-wrap{min-height:70px}.brand-copy{font-size:1.08rem}.hero{padding-top:34px}.hero h1{font-size:clamp(2.7rem,14vw,4.4rem)}.hero h1 span{margin-top:10px}.hero-actions .button{width:100%}.section{padding:62px 0}.feature-grid,.authors-panel{grid-template-columns:1fr}.events-card{padding:24px}.live-box,.newsletter-box{padding:24px}.footer-grid{align-items:flex-start;flex-direction:column}.promo-bar a{padding:9px 12px}}
+</style>
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
-
-  <div class="launch-bar">
-    <a href="https://www.sympla.com.br/evento/lancamento-do-livro-inteligencia-artificial/3539008?share_id=copiarlink" target="_blank" rel="noopener noreferrer">
-      <span class="launch-badge">LANÇAMENTO</span>
-      🎉 Noite de autógrafos — garanta seu lugar! <span>→</span>
-    </a>
+<div class="promo-bar"><a href="https://pay.voompcreators.com.br/N3QSwbrZeGPgJZQH/offer/7tsrYe" target="_blank" rel="noopener">Adquira seu exemplar agora mesmo com frete gratuito →</a></div>
+<header class="site-header" id="topo">
+  <div class="container nav-wrap">
+    <a class="brand" href="#topo"><span class="brand-symbol">M</span><span class="brand-copy">Mestres.<em>IA</em></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#livro">O livro</a>
+      <a href="#autores">Autores</a>
+      <a href="#conteudos">Conteúdos</a>
+      <a href="#recursos">Recursos</a>
+      <a class="nav-events" href="#proximos-lancamentos">Próximos lançamentos</a>
+      <a class="buy-nav" href="https://pay.voompcreators.com.br/N3QSwbrZeGPgJZQH/offer/7tsrYe" target="_blank" rel="noopener">COMPRAR LIVRO</a>
+    </nav>
   </div>
-
-  <header class="site-header" id="topo">
-    <div class="container nav-wrap">
-      <a class="brand" href="#topo" aria-label="Mestres.IA - início">
-        <span class="brand-symbol">M</span>
-        <span class="brand-copy"><strong>Mestres</strong><em>.IA</em></span>
-      </a>
-
-      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="#lancamento" style="color:var(--cyan)">🎉 Lançamento</a>
-        <a href="#livro">O livro</a>
-        <a href="#autores">Autores</a>
-        <a href="#conteudos">Conteúdos</a>
-        <a href="#recursos">Recursos</a>
-        <a href="#empresas">Para empresas</a>
-      </nav>
-
-      <a class="button button-sm button-outline desktop-cta" href="#cadastro">Entrar no ecossistema</a>
+</header>
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Portal oficial do livro</div>
+      <h1>Inteligência Artificial <span>nos Negócios</span></h1>
+      <p class="hero-lead">Conhecimento, ferramentas e experiências para transformar a inteligência artificial em decisões melhores, equipes mais produtivas e negócios mais competitivos.</p>
+      <div class="hero-actions">
+        <a class="button button-orange" href="https://pay.voompcreators.com.br/N3QSwbrZeGPgJZQH/offer/7tsrYe" target="_blank" rel="noopener">COMPRAR O LIVRO — FRETE GRÁTIS ↗</a>
+        <a class="button button-outline" href="#conteudos">Explorar o portal</a>
+      </div>
+      <div class="hero-mini"><span>IA + Negócios</span><span>IA + Pessoas</span><span>IA + Vendas</span></div>
     </div>
-  </header>
-
-  <main>
-    <section class="hero section-pad">
-      <div class="hero-grid container">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> PORTAL OFICIAL DO LIVRO</div>
-          <h1>Inteligência Artificial <span>nos Negócios</span></h1>
-          <p class="hero-lead">Conhecimento, ferramentas e experiências para transformar a inteligência artificial em decisões melhores, equipes mais produtivas e negócios mais competitivos.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#livro">Conheça o livro <span>↗</span></a>
-            <a class="button button-ghost" href="#conteudos"><span class="play">▶</span> Explorar o portal</a>
-          </div>
-          <div class="hero-proof">
-            <div class="avatar-stack" aria-hidden="true">
-              <span>IM</span><span>IA</span><span>+30</span>
-            </div>
-            <p><strong>Múltiplos especialistas.</strong><br />Uma visão prática sobre o futuro dos negócios.</p>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal delay-1" aria-label="Representação visual do livro e do ecossistema de inteligência artificial">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="floating-chip chip-one">IA + Vendas</div>
-          <div class="floating-chip chip-two">IA + Pessoas</div>
-          <div class="floating-chip chip-three">IA + Estratégia</div>
-          <div class="book-card book-card-photo">
-            <img src="assets/capa-livro.jpg" alt="Capa do livro Inteligência Artificial como Ferramenta de Transformação" style="width:100%;height:100%;object-fit:cover;border-radius:4px;display:block;" />
-          </div>
-          <div class="data-panel">
-            <div><span>Aplicação</span><strong>Prática</strong></div>
-            <div class="signal"><i></i><i></i><i></i><i></i></div>
-          </div>
-        </div>
+    <div class="hero-visual">
+      <div class="book-stage">
+        <span class="float-tag tag-a">IA + Vendas</span><span class="float-tag tag-b">IA + Pessoas</span>
+        <img class="book-cover" src="assets/capa-livro.png" alt="Capa do livro Inteligência Artificial como Ferramenta de Transformação">
       </div>
-      <div class="scroll-hint"><span></span> Role para descobrir</div>
-    </section>
-
-    <section class="marquee" aria-label="Temas abordados pelo portal">
-      <div class="marquee-track">
-        <span>INTELIGÊNCIA ARTIFICIAL</span><i>◆</i><span>ESTRATÉGIA</span><i>◆</i><span>VENDAS</span><i>◆</i><span>GESTÃO DE PESSOAS</span><i>◆</i><span>MARKETING</span><i>◆</i><span>PRODUTIVIDADE</span><i>◆</i>
-        <span>INTELIGÊNCIA ARTIFICIAL</span><i>◆</i><span>ESTRATÉGIA</span><i>◆</i><span>VENDAS</span><i>◆</i><span>GESTÃO DE PESSOAS</span><i>◆</i><span>MARKETING</span><i>◆</i><span>PRODUTIVIDADE</span><i>◆</i>
-      </div>
-    </section>
-
-    <section class="portal-intro section-pad" id="conteudos">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <div class="eyebrow"><span></span> MUITO ALÉM DE UM LIVRO</div>
-            <h2>Um ecossistema para aprender, aplicar e evoluir.</h2>
-          </div>
-          <p>O Mestres.IA conecta especialistas, líderes e profissionais que desejam transformar tecnologia em resultado real.</p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <div class="icon-box">✦</div>
-            <span class="feature-index">01</span>
-            <h3>Conteúdo que acompanha o mercado</h3>
-            <p>Artigos, análises e tendências explicadas de forma clara, estratégica e aplicável.</p>
-            <a href="#cadastro">Explorar conteúdos <span>→</span></a>
-          </article>
-          <article class="feature-card reveal delay-1">
-            <div class="icon-box">⌘</div>
-            <span class="feature-index">02</span>
-            <h3>Ferramentas para colocar a IA em ação</h3>
-            <p>Prompts, checklists, frameworks e materiais para acelerar a transformação dos negócios.</p>
-            <a href="#recursos">Ver recursos <span>→</span></a>
-          </article>
-          <article class="feature-card reveal delay-2">
-            <div class="icon-box">◎</div>
-            <span class="feature-index">03</span>
-            <h3>Conhecimento de quem faz</h3>
-            <p>Autores e convidados que unem experiência de mercado, pesquisa e visão de futuro.</p>
-            <a href="#autores">Conhecer especialistas <span>→</span></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="book-section section-pad" id="livro">
-      <div class="container book-layout">
-        <div class="book-scene reveal">
-          <div class="book-shadow"></div>
-          <div class="book-mockup book-mockup-photo">
-            <img src="assets/capa-livro.jpg" alt="Capa do livro Inteligência Artificial como Ferramenta de Transformação" style="width:100%;height:100%;object-fit:cover;border-radius:4px;box-shadow:40px 50px 80px rgba(0,0,0,.55);" />
-          </div>
-        </div>
-
-        <div class="book-content reveal delay-1">
-          <div class="eyebrow"><span></span> A OBRA</div>
-          <h2>Um livro para quem não quer apenas acompanhar o futuro, mas construí-lo.</h2>
-          <p>“Inteligência Artificial nos Negócios” reúne diferentes olhares sobre uma mesma transformação: como usar a IA para aumentar produtividade, melhorar decisões, desenvolver pessoas e criar novas oportunidades.</p>
-          <ul class="check-list">
-            <li><span>✓</span> Aplicações práticas em diferentes áreas da empresa</li>
-            <li><span>✓</span> Linguagem acessível para gestores e profissionais</li>
-            <li><span>✓</span> Estratégias, exemplos e reflexões de especialistas</li>
-            <li><span>✓</span> Conteúdo pensado para o mercado brasileiro</li>
-          </ul>
-          <div class="button-row">
-            <a class="button button-primary" href="#cadastro">Quero saber do lançamento <span>↗</span></a>
-            <a class="text-link" href="#autores">Conheça os autores →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="themes section-pad" id="recursos">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <div class="eyebrow"><span></span> IA APLICADA AO NEGÓCIO</div>
-            <h2>Encontre o conteúdo certo para o seu desafio.</h2>
-          </div>
-          <p>Navegue pelas áreas que estão sendo profundamente transformadas pela inteligência artificial.</p>
-        </div>
-
-        <div class="theme-grid">
-          <a class="theme-card reveal" href="#cadastro"><span>01</span><div><small>GESTÃO</small><h3>Estratégia e decisões</h3><p>IA para analisar cenários, identificar oportunidades e apoiar escolhas melhores.</p></div><b>↗</b></a>
-          <a class="theme-card reveal delay-1" href="#cadastro"><span>02</span><div><small>COMERCIAL</small><h3>Vendas e clientes</h3><p>Prospecção, inteligência comercial, personalização e aumento de produtividade.</p></div><b>↗</b></a>
-          <a class="theme-card reveal" href="#cadastro"><span>03</span><div><small>PESSOAS</small><h3>Liderança e RH</h3><p>Desenvolvimento, comunicação, cultura, aprendizagem e experiência do colaborador.</p></div><b>↗</b></a>
-          <a class="theme-card reveal delay-1" href="#cadastro"><span>04</span><div><small>MERCADO</small><h3>Marketing e conteúdo</h3><p>Pesquisa, criação, automação e experiências mais relevantes para o público.</p></div><b>↗</b></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="authors section-pad" id="autores">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <div class="eyebrow"><span></span> INTELIGÊNCIA COLETIVA</div>
-            <h2>Os autores que transformam conhecimento em ação.</h2>
-          </div>
-          <p>33 especialistas de diferentes áreas, unidos para apresentar uma visão plural, prática e atual sobre o uso da IA nos negócios.</p>
-        </div>
-
-        <div class="authors-grid reveal delay-1">
-          <div class="author-item"><div class="author-avatar av-a">AU</div><div class="author-info"><strong>Ale Uehara</strong><small>Inovação Corporativa</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">AC</div><div class="author-info"><strong>Ana Carolina Teles</strong><small>Ética em IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">AM</div><div class="author-info"><strong>Antonio Minier</strong><small>ConsciêncIA Digital</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">CA</div><div class="author-info"><strong>Camila Augusto</strong><small>Coautora</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">CF</div><div class="author-info"><strong>Cecilio Cosac Fraguas</strong><small>Mercado Financeiro</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">CR</div><div class="author-info"><strong>Charles Ribeiro</strong><small>IoT e Edge AI</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">EA</div><div class="author-info"><strong>Eduardo Assis</strong><small>Segurança Digital</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">EG</div><div class="author-info"><strong>Eneile Guimarães</strong><small>Governança de IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">GY</div><div class="author-info"><strong>George Yagui</strong><small>IA nos Negócios</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">GD</div><div class="author-info"><strong>Glaucio Daniel dos Santos</strong><small>Orquestração de IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">GP</div><div class="author-info"><strong>Guilherme Pereira</strong><small>Agentes de IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">HS</div><div class="author-info"><strong>Helds Souza</strong><small>Tomada de Decisão</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">HT</div><div class="author-info"><strong>Henrique Tichauer</strong><small>IA na Educação</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">HM</div><div class="author-info"><strong>Hélio Ferreira Moraes</strong><small>LGPD e IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">IM</div><div class="author-info"><strong>Isaac Martins</strong><small>Vendas · Organizador</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">JA</div><div class="author-info"><strong>Jéssica Alves</strong><small>IA Generativa</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">JJ</div><div class="author-info"><strong>Jorge Jubilato</strong><small>RH e Recrutamento</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">JC</div><div class="author-info"><strong>José Carlos Cordeiro</strong><small>Automação com IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">JU</div><div class="author-info"><strong>Juan Carlo</strong><small>Narrativa e IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">LD</div><div class="author-info"><strong>Lacier Dias</strong><small>IA Corporativa</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">LA</div><div class="author-info"><strong>Laércio Dona</strong><small>IA na Educação</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">LU</div><div class="author-info"><strong>Luciano Amato</strong><small>Viés Algorítmico</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">LG</div><div class="author-info"><strong>Luís Guedes</strong><small>Liderança</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">MM</div><div class="author-info"><strong>Marcella Guimarães Martinez</strong><small>Direito e IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">NN</div><div class="author-info"><strong>Nayara Namorato</strong><small>Fundamentos de IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">PL</div><div class="author-info"><strong>Pablo Lopes</strong><small>Linguagem Natural</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">PA</div><div class="author-info"><strong>Paolo Almeida</strong><small>Autoaprendizagem</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">PD</div><div class="author-info"><strong>Patrick Diorio</strong><small>Análise de Dados</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">PT</div><div class="author-info"><strong>Paulo Torres</strong><small>Inovação e Execução</small></div></div>
-          <div class="author-item"><div class="author-avatar av-b">RP</div><div class="author-info"><strong>Roberta Pereira da Silva</strong><small>IA Adaptativa</small></div></div>
-          <div class="author-item"><div class="author-avatar av-c">RC</div><div class="author-info"><strong>Rodrigo Constantino</strong><small>Implantação de IA</small></div></div>
-          <div class="author-item"><div class="author-avatar av-d">RP</div><div class="author-info"><strong>Rodrigo Penna</strong><small>Estratégia Competitiva</small></div></div>
-          <div class="author-item"><div class="author-avatar av-a">TF</div><div class="author-info"><strong>Thaís Falabella</strong><small>Experiência do Cliente</small></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="business section-pad" id="empresas">
-      <div class="container business-card reveal">
-        <div class="business-art" aria-hidden="true"><div class="grid-sphere"></div></div>
-        <div class="business-content">
-          <div class="eyebrow light"><span></span> PARA EMPRESAS</div>
-          <h2>Leve a inteligência artificial para dentro da sua organização.</h2>
-          <p>Utilize o livro como ponto de partida para desenvolver líderes, capacitar equipes e acelerar a adoção responsável da IA.</p>
-          <div class="business-options">
-            <span>✓ Kits corporativos</span><span>✓ Palestras</span><span>✓ Workshops</span><span>✓ Treinamentos</span>
-          </div>
-          <a class="button button-light" href="mailto:contato@mestres.ia.br">Falar sobre soluções corporativas <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-pad" id="lancamento" style="background:#080d1b">
-      <div class="container">
-        <div class="event-section reveal">
-          <div>
-            <div class="eyebrow"><span></span> EVENTO PRESENCIAL</div>
-            <h2 style="font-size:clamp(30px,4vw,52px);letter-spacing:-.04em;margin:12px 0 0">Noite de autógrafos<br /><span style="color:var(--cyan)">& lançamento oficial</span></h2>
-            <div class="event-meta">
-              <span class="event-tag">📅 Data a confirmar</span>
-              <span class="event-tag">📍 Local a confirmar</span>
-              <span class="event-tag">🎟️ Inscrição gratuita</span>
-            </div>
-            <p style="color:var(--muted);font-size:16px;max-width:540px;margin:0 0 28px">Celebre o lançamento do livro com os autores, coautores e organizadores. Uma noite de troca de conhecimento, networking e muito conteúdo sobre IA nos negócios.</p>
-            <a class="button button-primary" href="https://www.sympla.com.br/evento/lancamento-do-livro-inteligencia-artificial/3539008?share_id=copiarlink" target="_blank" rel="noopener noreferrer">
-              Garantir meu lugar <span>↗</span>
-            </a>
-          </div>
-          <div style="text-align:center">
-            <img src="assets/capa-livro.jpg" alt="Capa do livro" style="width:200px;border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5);transform:rotate(3deg)" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="newsletter section-pad" id="cadastro">
-      <div class="container newsletter-box reveal">
-        <div>
-          <div class="eyebrow"><span></span> ENTRE NO ECOSSISTEMA</div>
-          <h2>Receba conteúdos, recursos e novidades do livro.</h2>
-          <p>Cadastre-se para acompanhar o lançamento e acessar materiais exclusivos sobre IA aplicada aos negócios.</p>
-        </div>
-        <form class="lead-form" id="leadForm">
-          <label class="sr-only" for="name">Seu nome</label>
-          <input id="name" name="name" type="text" placeholder="Seu nome" required />
-          <label class="sr-only" for="email">Seu melhor e-mail</label>
-          <input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required />
-          <button class="button button-primary" type="submit">Quero receber novidades <span>→</span></button>
-          <small>Ao se cadastrar, você concorda com nossa política de privacidade.</small>
-          <p class="form-status" role="status"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="#topo"><span class="brand-symbol">M</span><span class="brand-copy"><strong>Mestres</strong><em>.IA</em></span></a>
-        <p>Portal oficial do livro Inteligência Artificial nos Negócios.</p>
-      </div>
-      <div><strong>Portal</strong><a href="#livro">O livro</a><a href="#autores">Autores</a><a href="#conteudos">Conteúdos</a><a href="#recursos">Recursos</a></div>
-      <div><strong>Conecte-se</strong><a href="#cadastro">Novidades</a><a href="#empresas">Para empresas</a><a href="mailto:contato@mestres.ia.br">Contato</a></div>
-      <div class="footer-cta"><strong>O futuro dos negócios já começou.</strong><a class="button button-outline" href="#cadastro">Faça parte <span>→</span></a></div>
     </div>
-    <div class="container footer-bottom"><span>© 2026 Mestres.IA. Todos os direitos reservados.</span><span>Uma iniciativa do Instituto Isaac Martins.</span></div>
-  </footer>
+  </div>
+</section>
 
-  <script src="assets/script.js"></script>
+<section class="section" id="conteudos">
+  <div class="container">
+    <div class="section-heading">
+      <div><div class="eyebrow">Muito além de um livro</div><h2>Um ecossistema para aprender, aplicar e evoluir.</h2></div>
+      <p>Conteúdos, especialistas e ferramentas para transformar tecnologia em resultado real.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card"><small>CONTEÚDOS</small><h3>Conhecimento que acompanha o mercado</h3><p>Artigos, análises, entrevistas e tendências sobre inteligência artificial aplicada aos negócios.</p><a href="#cadastro">Explorar conteúdos →</a></article>
+      <article class="feature-card resources-anchor" id="recursos"><small>RECURSOS</small><h3>Ferramentas para colocar a IA em ação</h3><p>Prompts, checklists, frameworks, materiais e referências para acelerar sua aplicação prática.</p><a href="#cadastro">Acessar recursos →</a></article>
+      <article class="feature-card"><small>ESPECIALISTAS</small><h3>Conhecimento de quem faz</h3><p>Autores e convidados que unem experiência de mercado, pesquisa, gestão e visão de futuro.</p><a href="#autores">Conhecer autores →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="section book-section" id="livro">
+  <div class="container book-layout">
+    <div class="book-frame"><img src="assets/capa-livro.png" alt="Livro Inteligência Artificial como Ferramenta de Transformação"></div>
+    <div class="book-content">
+      <div class="eyebrow">A obra</div>
+      <h2>IA como ferramenta de transformação para os negócios.</h2>
+      <p>Uma obra construída para empresários, gestores e profissionais que desejam compreender a inteligência artificial de forma prática e conectada às decisões do mundo real.</p>
+      <ul class="check-list"><li><b>✓</b> Aplicações práticas da IA no contexto empresarial</li><li><b>✓</b> Reflexões estratégicas sobre o futuro dos negócios</li><li><b>✓</b> Conteúdo para diferentes áreas e perfis profissionais</li><li><b>✓</b> Conhecimento desenvolvido por especialistas</li></ul>
+      <a class="button button-orange" href="https://pay.voompcreators.com.br/N3QSwbrZeGPgJZQH/offer/7tsrYe" target="_blank" rel="noopener">ADQUIRA SEU EXEMPLAR COM FRETE GRATUITO ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="autores">
+  <div class="container authors-layout">
+    <div class="authors-copy"><div class="eyebrow">Inteligência coletiva</div><h2>Autores que transformam conhecimento em ação.</h2><p>Profissionais de diferentes áreas reunidos para apresentar uma visão plural e prática sobre como a inteligência artificial está transformando pessoas, empresas e mercados.</p></div>
+    <div class="authors-panel">
+      <div class="author-chip"><span>IM</span><strong>Isaac Martins</strong><br><small>Coorganizador</small></div>
+      <div class="author-chip"><span>LA</span><strong>Luciano Amato</strong><br><small>Coorganizador</small></div>
+      <div class="author-chip"><span>IA</span><strong>Especialistas</strong><br><small>IA, gestão e negócios</small></div>
+      <div class="author-chip"><span>+</span><strong>Visões plurais</strong><br><small>Mercado e transformação</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container live-box">
+    <div><div class="eyebrow">Lives dos autores</div><h2>IA em pauta. Ao vivo.</h2><p>Participe dos encontros com autores e convidados. O link de cada transmissão é divulgado no grupo oficial do WhatsApp.</p></div>
+    <div><a class="button button-whatsapp" href="https://chat.whatsapp.com/JmPaJ9l00vd2kVOTfSKEKk" target="_blank" rel="noopener">ENTRAR NO GRUPO DAS LIVES →</a></div>
+  </div>
+</section>
+
+<section class="section events-section" id="proximos-lancamentos">
+  <div class="container">
+    <div class="events-card">
+      <div class="events-head"><div class="eyebrow">Agenda do livro</div><h2>Próximos lançamentos</h2><p>O projeto segue viajando pelo Brasil. Confira as próximas datas e acompanhe os encontros presenciais do livro.</p></div>
+      <div class="event-grid">
+        <article class="event-item featured"><div class="event-date">22/10 • CURITIBA</div><h3>Curitiba, PR</h3><p>Próximo encontro confirmado. Confira todos os detalhes e faça sua inscrição na página oficial do evento.</p><a class="event-link" href="https://ev.bcontroltech.com.br/lp/o-futuro-dos-negocios-22-outubro" target="_blank" rel="noopener">VER EVENTO DE CURITIBA →</a></article>
+        <article class="event-item"><div class="event-date">24/02</div><h3>Belo Horizonte, MG</h3><p>Local a definir.</p><span class="event-link">EM BREVE</span></article>
+        <article class="event-item"><div class="event-date">17/03</div><h3>Rio de Janeiro, RJ</h3><p>Local a definir.</p><span class="event-link">EM BREVE</span></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cadastro">
+  <div class="container newsletter-box">
+    <div><div class="eyebrow">Entre no ecossistema</div><h2>Receba conteúdos, recursos e novidades do livro.</h2><p>Cadastre-se para acompanhar novas agendas, conteúdos especiais e materiais sobre IA aplicada aos negócios.</p></div>
+    <form class="lead-form" id="leadForm"><label class="sr-only" for="name">Nome</label><input id="name" name="name" placeholder="Seu nome" required><label class="sr-only" for="email">E-mail</label><input id="email" name="email" type="email" placeholder="Seu melhor e-mail" required><button class="button button-primary" type="submit">QUERO RECEBER NOVIDADES →</button><p class="form-status" id="formStatus"></p></form>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div><a class="brand" href="#topo"><span class="brand-symbol">M</span><span class="brand-copy">Mestres.<em>IA</em></span></a><p>Portal oficial do livro Inteligência Artificial nos Negócios.</p></div><div class="footer-links"><a href="#livro">O livro</a><a href="#autores">Autores</a><a href="#conteudos">Conteúdos</a><a href="#recursos">Recursos</a><a href="#proximos-lancamentos">Próximos lançamentos</a></div></div></footer>
+<script>
+const toggle=document.getElementById('menuToggle'),nav=document.getElementById('mainNav');
+if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));}
+const form=document.getElementById('leadForm'),status=document.getElementById('formStatus');if(form){form.addEventListener('submit',e=>{e.preventDefault();status.textContent='Cadastro recebido! Em breve você receberá as novidades do Mestres.IA.';form.reset();});}
+</script>
 </body>
 </html>
